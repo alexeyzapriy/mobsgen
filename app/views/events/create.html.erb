@@ -1,0 +1,9 @@
+<h1>Here we go</h1>
+<%- @mobs.each_with_index do |mob, idx| %>
+  <h3><%= idx %></h3>
+  <%- mob.each do |email| %>
+    <ul>
+      <li><%= email %></li>
+    </ul>
+  <%- end %>
+<%- end %>

@@ -1,0 +1,5 @@
+<%= simple_form_for @event do |f| %>
+  <%= f.input :number_of_mobs, as: :numeric %>
+  <%= f.collection_check_boxes(:participants, @participants, :email, :email, {:item_wrapper_class => 'checkbox_container'}) do |b| b.label { b.check_box(checked: true) + b.text } end %>
+  <%= f.button :submit %>
+<% end %>

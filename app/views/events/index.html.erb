@@ -1,0 +1,12 @@
+<%= link_to "New Mob", controller: "events", action: "new" %>
+<hr/>
+
+<%= month_calendar(events: @events) do |date, events| %>
+  <%= date %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= event.name %>
+    </div>
+  <% end %>
+<% end %>
